@@ -1,0 +1,123 @@
+.chat-cta {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+  width: 100px;
+  transition: all 250ms ease-in-out;
+}
+
+.chat-cta.as-panel {
+  border-radius: 4px;
+  background-color: var(--accent-background-color);
+  border: 1px solid var(--bg-color-kinda-loud);
+  width: 384px;
+}
+
+.chat-cta .chat-cta-icon {
+  width: 100px;
+  transition: all 250ms ease-in-out;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.chat-cta.as-panel .chat-cta-icon {
+  position: relative;
+  top: -32px;
+  width: 56px;
+}
+
+.chat-cta .chat-cta-icon:hover {
+  transform: scale(1.25);
+}
+
+.chat-cta .chat-cta-icon img {
+  width: 100%;
+}
+
+.chat-cta .chat-body {
+  height: 400px;
+  transition: all 250ms ease-in-out;
+}
+
+.chat-cta.collapsed .chat-body {
+  height: 0px;
+  opacity: 0;
+  display: flex;
+}
+
+.chat-cta.as-panel .chat-header {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.chat-cta.as-panel .chat-header .chat-title {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.chat-cta.as-panel .chat-body .explainer {
+  margin: 0 16px;
+}
+
+.chat-cta.as-panel.chatty .chat-body {
+  display: flex;
+}
+
+.chat-cta.as-panel .chat-body .conversation,
+.chat-cta.chatty .chat-body .explainer {
+  display: none;
+}
+
+.chat-cta.as-panel.chatty .chat-body .conversation {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 16px 14px;
+}
+
+.chat-cta.as-panel .chat-body .explainer .dismiss {
+  margin-top: 8px;
+  text-align: right;
+}
+
+/*** CONVERSATION ***/
+
+.chat-cta.as-panel .conversation .chat-message {
+  width: 100%;
+  position: relative;
+  top: -2px;
+}
+
+.chat-cta.as-panel .conversation .chat-message textarea,
+.chat-cta.as-panel .conversation .chat-message textarea:focus {
+  width: 100%;
+  border: 1px solid #e9e9e9;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: none;
+  resize: none;
+}
+
+.chat-cta.as-panel .conversation .chat-message textarea:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.chat-cta.as-panel .conversation .history {
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid #e9e9e9;
+  background-color: #e6e6fa5c;
+  padding: 8px;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.chat-cta.as-panel .conversation .message {
+  border-left: 4px solid var(--text-brand-loud-red);
+  padding-left: 4px;
+  margin-bottom: 2px;
+}
